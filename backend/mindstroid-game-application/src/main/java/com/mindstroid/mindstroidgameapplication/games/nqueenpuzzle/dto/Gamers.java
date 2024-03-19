@@ -3,11 +3,14 @@ package com.mindstroid.mindstroidgameapplication.games.nqueenpuzzle.dto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
+import java.util.List;
+
+@AllArgsConstructor
 @Data
 @Builder
-@AllArgsConstructor
-@NoArgsConstructor
-public class NQueenPuzzleGameCreateRequest {
+public class Gamers {
+
+    private String username;
+    private List<CorrectSolution> correctSolutionList;
 }
