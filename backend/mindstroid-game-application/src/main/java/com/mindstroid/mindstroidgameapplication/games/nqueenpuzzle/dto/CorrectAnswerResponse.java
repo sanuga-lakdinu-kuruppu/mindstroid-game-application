@@ -9,9 +9,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Builder
-public class MatchAnswerRequest {
-    private int[][] answer;
-    private String user;
-    private String gameId;
-    private int timeTakenInSeconds;
+public class CorrectAnswerResponse {
+    private int index;
+    private int[][] solution;
+    private boolean isIdentify;
+    private int updatedScore;
 }

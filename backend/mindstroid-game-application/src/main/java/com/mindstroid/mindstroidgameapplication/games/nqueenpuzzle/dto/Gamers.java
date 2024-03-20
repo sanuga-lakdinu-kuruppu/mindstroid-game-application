@@ -11,6 +11,8 @@ import java.util.List;
 @Builder
 public class Gamers {
 
+    private String gamerId;
     private String username;
     private List<CorrectSolution> correctSolutionList;
+    private int score;
 }

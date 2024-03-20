@@ -1,14 +1,12 @@
 package com.mindstroid.mindstroidgameapplication.games.nqueenpuzzle.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Builder
+@Setter
 public class CorrectSolution {
     private int index;
     private int[][] solution;
