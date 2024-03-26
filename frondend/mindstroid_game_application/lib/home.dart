@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mindstroid_game_application/constants/image_strings.dart';
+import 'package:mindstroid_game_application/games/index_finder_searching/widgets/1_loading_widget.dart';
 
 import 'constants/text_strings.dart';
 
@@ -218,9 +219,9 @@ class _HomeState extends State<Home> {
                                 padding: const EdgeInsets.all(50.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.min,
+                                  mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    // WidgetGameFive(),
-                                    // StartMenu(),
+                                    LoadingWidget(),
                                   ],
                                 ),
                               ),
