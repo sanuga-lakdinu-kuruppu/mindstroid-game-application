@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mindstroid_game_application/constants/image_strings.dart';
+import 'package:mindstroid_game_application/games/index_finder_sorted/widget/1_loading_widget.dart';
 
 import 'constants/text_strings.dart';
 
@@ -144,28 +145,84 @@ class _HomeState extends State<Home> {
   }
 
   Widget gameFour() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 70),
-      child: Container(
-        height: MediaQuery.of(context).size.height * 0.7,
-        width: MediaQuery.of(context).size.width * 0.3,
-        decoration: BoxDecoration(
-          color: Colors.green,
-          borderRadius: BorderRadius.circular(10), // Adjust the radius as needed
-        ),
-        alignment: Alignment.center,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Text(
-              "Home 4",
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 32,
-                fontWeight: FontWeight.bold,
-              ),
+    return Container(
+      margin: EdgeInsets.all(20),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 70),
+        child: Container(
+          height: MediaQuery.of(context).size.height * 0.7,
+          width: MediaQuery.of(context).size.width * 0.3,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: backgroundImageGameFive,
+              fit: BoxFit.cover,
             ),
-          ],
+            color: Colors.green,
+            borderRadius: BorderRadius.circular(10), // Adjust the radius as needed
+          ),
+          alignment: Alignment.center,
+          child: Padding(
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return StatefulBuilder(
+                          builder: (context, setStateForDialog) {
+                            return Dialog(
+                              backgroundColor: Colors.white,
+                              shape: const RoundedRectangleBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                              ),
+                              child: Container(
+                                width: 600,
+                                height: 640,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  image: DecorationImage(
+                                    image: backgroundImageGameFour,
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                                padding: const EdgeInsets.all(50.0),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    // LoadingWidget4(),
+                                  ],
+                                ),
+                              ),
+                            );
+                          },
+                        );
+                      },
+                    );
+                  },
+                  child: const Text(
+                    "Play",
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                      fontFamily: inspirationRegular,
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    minimumSize: Size(150, 50),
+                  ),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );
