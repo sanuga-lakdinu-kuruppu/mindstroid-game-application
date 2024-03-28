@@ -3,15 +3,16 @@ import 'package:mindstroid_game_application/games/index_finder_searching/widgets
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
 import '../../../constants/image_strings.dart';
+import '2_name_widget.dart';
 
-class LoadingWidgetFive extends StatefulWidget {
-  const LoadingWidgetFive({super.key});
+class LoadingWidgetFour extends StatefulWidget {
+  const LoadingWidgetFour({super.key});
 
   @override
-  State<LoadingWidgetFive> createState() => _LoadingWidgetFiveState();
+  State<LoadingWidgetFour> createState() => _LoadingWidgetFourState();
 }
 
-class _LoadingWidgetFiveState extends State<LoadingWidgetFive> {
+class _LoadingWidgetFourState extends State<LoadingWidgetFour> {
 
   bool showMessage = false;
 
@@ -87,7 +88,7 @@ class _LoadingWidgetFiveState extends State<LoadingWidgetFive> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
-                    image: backgroundImageGameFive,
+                    image: backgroundImageGameFour,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -96,7 +97,7 @@ class _LoadingWidgetFiveState extends State<LoadingWidgetFive> {
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    NameWidget(),
+                    NameWidgetFour(),
                   ],
                 ),
               ),
