@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:mindstroid_game_application/games/index_finder_searching/widgets/2_name_widget.dart';
+import 'package:mindstroid_game_application/games/tic_tac_toe/widgets/2_name_widget.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
-
 import '../../../constants/image_strings.dart';
 
-class LoadingWidgetFive extends StatefulWidget {
-  const LoadingWidgetFive({super.key});
+
+class LoadingWidgetThree extends StatefulWidget {
+  const LoadingWidgetThree({super.key});
 
   @override
-  State<LoadingWidgetFive> createState() => _LoadingWidgetFiveState();
+  State<LoadingWidgetThree> createState() => _LoadingWidgetThreeState();
 }
 
-class _LoadingWidgetFiveState extends State<LoadingWidgetFive> {
+class _LoadingWidgetThreeState extends State<LoadingWidgetThree> {
 
   bool showMessage = false;
 
@@ -87,7 +88,7 @@ class _LoadingWidgetFiveState extends State<LoadingWidgetFive> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
-                    image: backgroundImageGameFive,
+                    image: backgroundImageGameThree,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -96,7 +97,7 @@ class _LoadingWidgetFiveState extends State<LoadingWidgetFive> {
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    NameWidget(),
+                    NameWidgetThree(),
                   ],
                 ),
               ),

@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:mindstroid_game_application/games/index_finder_searching/widgets/2_name_widget.dart';
+import 'package:mindstroid_game_application/games/nqueen_puzzle/presentation/widget/2_name_widget.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
-import '../../../constants/image_strings.dart';
+import '../../../../constants/image_strings.dart';
 
-class LoadingWidgetFive extends StatefulWidget {
-  const LoadingWidgetFive({super.key});
+
+class LoadingWidgetOne extends StatefulWidget {
+  const LoadingWidgetOne({super.key});
 
   @override
-  State<LoadingWidgetFive> createState() => _LoadingWidgetFiveState();
+  State<LoadingWidgetOne> createState() => _LoadingWidgetOneState();
 }
 
-class _LoadingWidgetFiveState extends State<LoadingWidgetFive> {
+class _LoadingWidgetOneState extends State<LoadingWidgetOne> {
 
   bool showMessage = false;
 
@@ -87,7 +89,7 @@ class _LoadingWidgetFiveState extends State<LoadingWidgetFive> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
-                    image: backgroundImageGameFive,
+                    image: backgroundImageGameOne,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -96,7 +98,7 @@ class _LoadingWidgetFiveState extends State<LoadingWidgetFive> {
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    NameWidget(),
+                    NameWidgetOne()
                   ],
                 ),
               ),
